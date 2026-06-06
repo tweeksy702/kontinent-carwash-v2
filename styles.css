@@ -804,7 +804,8 @@ section {
     padding: 60px 40px;
     border-radius: var(--radius-lg);
     position: relative;
-    overflow: hidden;
+    overflow: visible;            /* либо просто удали эту строку */
+
 }
 
 .address__card::before {
