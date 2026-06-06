@@ -804,8 +804,8 @@ section {
     padding: 60px 40px;
     border-radius: var(--radius-lg);
     position: relative;
-    overflow: visible;            /* либо просто удали эту строку */
-
+    overflow: hidden;
+    isolation: isolate;        /* создаёт новый контекст наложения */
 }
 
 .address__card::before {
@@ -817,7 +817,10 @@ section {
     height: 200%;
     background: radial-gradient(circle, rgba(0, 180, 216, 0.15), transparent 50%);
     animation: rotate 20s linear infinite;
+    z-index: -1;               /* отправляем фон НАЗАД */
+    pointer-events: none;      /* и заодно говорим "не кликабельно" */
 }
+
 
 @keyframes rotate {
     from { transform: rotate(0deg); }
