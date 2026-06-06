@@ -107,13 +107,8 @@ a {
 
 .logo__icon {
     font-size: 28px;
-    animation: dropSpin 3s ease-in-out infinite;
 }
 
-@keyframes dropSpin {
-    0%, 100% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(360deg) scale(1.1); }
-}
 
 .nav {
     display: flex;
